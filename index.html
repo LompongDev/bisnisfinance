@@ -19,31 +19,26 @@
 
     /* Header */
     header {
-      background: url('assets/img/hero-1.png') no-repeat center center/cover;
-      background-size: cover;
+      background-color: #003366;
       padding: 120px 18px;
       text-align: center;
       color: #fff;
       position: relative;
-      filter: brightness(0.5);
     }
     header h1 {
       font-size: clamp(32px, 6vw, 66px);
       font-weight: 800;
       letter-spacing: 1.4px;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     }
     header h1 span {
       display: block;
       margin-top: 16px;
       font-size: clamp(14px, 2.5vw, 18px);
       font-weight: 400;
-      opacity: .9;
     }
     header .cta {
-      position: absolute;
-      top: 16px;
-      right: 16px;
+      display: inline-block;
+      margin-top: 40px;
       padding: 18px 48px;
       background: #00BCD4;
       color: #fff;
@@ -65,7 +60,7 @@
       background: #003366;
       padding: 16px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       gap: 24px;
       z-index: 10;
     }
@@ -76,6 +71,37 @@
       text-transform: uppercase;
     }
     nav a:hover {
+      color: #00BCD4;
+    }
+
+    /* Hamburger Menu */
+    #hamburger {
+      display: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    #menu {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 80px;
+      left: 20px;
+      background-color: #003366;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #menu a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    #menu a:hover {
       color: #00BCD4;
     }
 
@@ -182,6 +208,12 @@
         flex-direction: column;
         padding: 16px;
       }
+      #hamburger {
+        display: block;
+      }
+      #menu {
+        display: none;
+      }
     }
 
     @media(max-width: 480px) {
@@ -207,7 +239,15 @@
     <a href="#saving-tips">Saving Tips</a>
     <a href="#investment-strategies">Investment Strategies</a>
     <a href="#financial-freedom">Financial Freedom</a>
+    <div id="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
+
+  <div id="menu">
+    <a href="#home">Home</a>
+    <a href="#saving-tips">Saving Tips</a>
+    <a href="#investment-strategies">Investment Strategies</a>
+    <a href="#financial-freedom">Financial Freedom</a>
+  </div>
 
   <main>
     <!-- Home Section -->
@@ -223,7 +263,6 @@
     <section id="saving-tips">
       <article>
         <h2>5 Simple Tips for Saving Money Effectively</h2>
-        <p>Saving money doesn’t have to be difficult. Here are some tips to get you started:</p>
         <ul>
           <li><strong>Create a Budget</strong> – Track your income and expenses, and plan your savings goals.</li>
           <li><strong>Pay Yourself First</strong> – Set aside a portion of your income for savings before anything else.</li>
@@ -238,12 +277,10 @@
     <section id="investment-strategies">
       <article>
         <h2>Smart Investment Strategies for Long-Term Growth</h2>
-        <p>Investing is one of the best ways to build wealth. Here are a few strategies to consider:</p>
         <ul>
           <li><strong>Diversify Your Portfolio</strong> – Spread your investments across different asset classes to reduce risk.</li>
           <li><strong>Focus on Long-Term Investments</strong> – Invest in assets that will grow over time, rather than seeking short-term gains.</li>
           <li><strong>Reinvest Your Earnings</strong> – Use the returns from your investments to buy more assets and grow your wealth faster.</li>
-          <li><strong>Do Your Research</strong> – Understand the investments you’re making and align them with your goals.</li>
         </ul>
       </article>
     </section>
@@ -252,17 +289,14 @@
     <section id="financial-freedom">
       <article>
         <h2>Achieving Financial Freedom: A Guide to Success</h2>
-        <p>Financial freedom is the ability to live life on your terms, without worrying about money. Here’s how to achieve it:</p>
         <ul>
           <li><strong>Live Below Your Means</strong> – Spend less than you earn and save the difference.</li>
           <li><strong>Invest in Passive Income Streams</strong> – Build wealth through stocks, bonds, real estate, or businesses that generate income.</li>
           <li><strong>Eliminate Debt</strong> – Pay off high-interest debt quickly to increase your wealth.</li>
-          <li><strong>Plan for the Future</strong> – Set long-term goals and work towards them consistently.</li>
         </ul>
       </article>
     </section>
 
-    <!-- Call to Action Section -->
     <div class="cta-block">
       <h3>Start Your Financial Journey Today</h3>
       <p>Get started on the path to financial freedom by implementing these tips and strategies today!</p>
@@ -276,6 +310,13 @@
 
   <!-- Floating Button -->
   <a href="#contact" class="floating-btn">Contact Us</a>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
 
 </body>
   </html>
