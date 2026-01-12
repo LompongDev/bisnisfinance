@@ -91,9 +91,10 @@
       background: #003366;
       padding: 16px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 24px;
       z-index: 10;
+      display: none; /* Hide by default */
     }
 
     nav a {
@@ -104,6 +105,38 @@
     }
 
     nav a:hover {
+      color: #00BCD4;
+    }
+
+    /* Hamburger Menu */
+    #hamburger {
+      display: block;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+    }
+
+    #menu {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 80px;
+      left: 20px;
+      background-color: #003366;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #menu a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    #menu a:hover {
       color: #00BCD4;
     }
 
@@ -243,7 +276,9 @@
     <a class="cta" href="#services">Explore Our Services</a>
   </header>
 
-  <nav>
+  <div id="hamburger" onclick="toggleMenu()">☰</div>
+
+  <nav id="menu">
     <a href="#home">Home</a>
     <a href="#saving-tips">Saving Tips</a>
     <a href="#investment-strategies">Investment Strategies</a>
@@ -309,5 +344,12 @@
     <p>© 2026 Business Finance • All Rights Reserved</p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+
 </body>
-    </html>
+</html>
