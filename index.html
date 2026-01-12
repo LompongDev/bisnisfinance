@@ -8,8 +8,7 @@
     <meta name="author" content="Business Finance">
     <title>Business Finance | Smart Financial Solutions</title>
     <link href="favicon.ico" rel="icon" type="image/x-icon">
-    <link href="style.css" rel="stylesheet">
-
+    
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="your-google-verification-code-here">
 
@@ -54,20 +53,26 @@
             font-size: 1rem;
         }
 
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
         .hero {
             background-color: #0273b9;
             color: white;
             text-align: center;
             padding: 80px 20px;
+            border-bottom: 2px solid #ffcc00;
         }
 
         .cta-button {
             background-color: #ffcc00;
             color: #333;
-            padding: 10px 30px;
+            padding: 12px 30px;
             border-radius: 5px;
             font-size: 1.2rem;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease-in-out;
             text-decoration: none;
         }
 
@@ -75,8 +80,26 @@
             background-color: #e6b800;
         }
 
+        /* Content Section */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Accordion Section */
         .accordion {
-            margin: 20px;
+            margin: 40px 0;
         }
 
         .accordion button {
@@ -102,17 +125,6 @@
             padding: 10px;
             background-color: #f4f4f4;
             border-left: 3px solid #0273b9;
-            margin: 10px 0;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .panel ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        .panel ul li {
-            margin: 5px 0;
         }
 
         footer {
@@ -129,12 +141,17 @@
 
         /* Mobile responsiveness */
         @media (max-width: 768px) {
+            .feature-box {
+                flex-direction: column;
+                gap: 20px;
+            }
+
             .hero h2 {
                 font-size: 2.5rem;
             }
 
             .cta-button {
-                padding: 10px 20px;
+                padding: 12px 20px;
                 font-size: 1.1rem;
             }
         }
@@ -160,50 +177,63 @@
         <a href="#services" class="cta-button">Explore Our Services</a>
     </section>
 
-    <!-- Accordion for Other Sections -->
-    <div class="accordion">
-        <button class="accordion-button">About Us</button>
-        <div class="panel">
-            <h3>About Us</h3>
-            <p>Business Finance is a comprehensive platform offering professional financial advice and solutions for individuals and businesses. Whether you're looking to invest in real estate, plan your finances, or get expert tax consultation, we have the tools and expertise to help you succeed.</p>
-            <p>Our team of experienced financial consultants is dedicated to helping clients achieve financial independence through smart investment strategies and careful financial planning. With over a decade of experience, we aim to provide customized solutions that meet your specific financial goals.</p>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer a range of services designed to address your financial needs, from building wealth to managing taxes. Here's what we provide:</p>
+        <div class="feature-box">
+            <div>
+                <h4>Investment Basics</h4>
+                <p>Learn the fundamentals of investing and how to make your first investment. We cover stocks, bonds, mutual funds, and other investment options to help you grow your wealth.</p>
+            </div>
+            <div>
+                <h4>Money Management</h4>
+                <p>Master the art of budgeting, saving, and managing your money effectively. Our experts guide you through creating a practical budget, managing cash flow, and eliminating debt.</p>
+            </div>
+            <div>
+                <h4>Retirement Planning</h4>
+                <p>Discover the best strategies for securing a comfortable retirement. From IRAs to 401(k)s, we help you make informed decisions to ensure your retirement is financially secure.</p>
+            </div>
         </div>
+    </section>
 
-        <button class="accordion-button">Our Services</button>
-        <div class="panel">
-            <h3>Our Services</h3>
-            <ul>
-                <li><strong>Real Estate Investment:</strong> Helping you invest in profitable real estate opportunities.</li>
-                <li><strong>Financial Planning:</strong> Designing personalized financial strategies to meet your life goals.</li>
-                <li><strong>Tax Consultation:</strong> Providing tax solutions for individuals and businesses.</li>
-                <li><strong>Retirement Planning:</strong> Expert strategies to ensure a comfortable future.</li>
-                <li><strong>Debt Management:</strong> Assistance in debt restructuring and repayment.</li>
-            </ul>
-        </div>
+    <!-- Blog Section with Valuable Articles -->
+    <section id="blog">
+        <h2>Latest Articles</h2>
+        <div class="accordion">
+            <button class="accordion-button">5 Smart Investment Strategies for Beginners</button>
+            <div class="panel">
+                <p>Investing can be tricky, but with the right strategies, you can start building wealth. Learn the basics and discover investment options that suit your risk tolerance and goals.</p>
+                <a href="#">Read More</a>
+            </div>
 
-        <button class="accordion-button">Blog</button>
-        <div class="panel">
-            <h3>Latest Articles</h3>
-            <p><a href="#">5 Smart Investment Tips for Beginners</a></p>
-            <p><a href="#">How to Create a Sustainable Financial Plan</a></p>
-            <p><a href="#">Tax Planning for Small Businesses</a></p>
-        </div>
+            <button class="accordion-button">How to Create a Sustainable Financial Plan</button>
+            <div class="panel">
+                <p>A good financial plan is your roadmap to financial freedom. In this article, we’ll walk you through the steps of creating a sustainable plan that covers saving, budgeting, and investing.</p>
+                <a href="#">Read More</a>
+            </div>
 
-        <button class="accordion-button">Contact Us</button>
-        <div class="panel">
-            <h3>Contact Us</h3>
-            <p>Feel free to reach out to us for any inquiries or consultations!</p>
-            <form action="#">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="message">Your Message:</label><br>
-                <textarea id="message" name="message" required></textarea><br><br>
-                <button type="submit">Send Message</button>
-            </form>
+            <button class="accordion-button">Tax Planning for Small Businesses</button>
+            <div class="panel">
+                <p>Understanding tax planning is crucial for small business owners. We discuss tax deductions, credits, and strategies to minimize liabilities and maximize savings.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
     <footer>
         <p>&copy; 2026 Business Finance. All rights reserved.</p>
@@ -230,4 +260,4 @@
         }
     </script>
 </body>
-  </html>
+</html>
