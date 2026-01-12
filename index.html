@@ -14,70 +14,153 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6774463012275083" crossorigin="anonymous"></script>
   
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:Poppins,Arial;background:#f4f7fb;color:#333;line-height:1.8}
-
-    /* HEADER */
-    header{
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family:Poppins, Arial, sans-serif;background-color:#f5f8ff;color:#333;line-height:1.8;}
+    
+    /* Header */
+    header {
       background: url('assets/img/hero-1.png') no-repeat center center/cover;
-      padding:100px 18px 120px;text-align:center
+      padding: 120px 18px 160px;
+      text-align: center;
+      color: #fff;
     }
-    header h1{font-size:clamp(32px,6vw,66px);font-weight:800;letter-spacing:1.4px;color:#fff}
-    header h1 span{display:block;margin-top:16px;font-size:clamp(14px,2.5vw,18px);font-weight:400;opacity:.9;color:#fff}
-    header .cta{display:inline-block;margin-top:46px;padding:18px 64px;background:#fff;color:#243bff;font-weight:800;border-radius:90px;text-decoration:none}
-    header .cta:hover{background-color:#243bff;color:#fff}
-
-    /* NAV */
-    nav{
-      position:sticky;top:0;z-index:3000;background:#243bff;border-bottom:1px solid #1a2255;
-      display:flex;justify-content:center;gap:34px;padding:14px
+    header h1 {
+      font-size: clamp(32px, 6vw, 66px);
+      font-weight: 800;
+      letter-spacing: 1.4px;
     }
-    nav a{color:#fff;text-decoration:none;font-weight:600}
-
-    /* MAIN */
-    main{max-width:1250px;margin:auto;padding:56px 18px}
-    article{background:#fff;padding:40px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
-
-    /* TEXT */
-    h2{color:#243bff;font-size:clamp(24px,4vw,40px)}
-    h3{margin-top:30px;color:#243bff;font-size:1.5rem}
-    p{margin:20px 0;color:#333}
-    ul{margin-left:22px}
-    li{margin:14px 0;color:#333;}
-
-    /* CTA BLOCK */
-    .cta-block{
-      background:linear-gradient(135deg,#1f2cff,#3f6cff);
-      padding:54px;border-radius:40px;margin:76px 0;text-align:center
+    header h1 span {
+      display: block;
+      margin-top: 16px;
+      font-size: clamp(14px, 2.5vw, 18px);
+      font-weight: 400;
+      opacity: .9;
     }
-    .cta-block a{
-      display:inline-block;margin-top:24px;padding:18px 64px;background:#fff;color:#243bff;
-      font-weight:800;border-radius:90px;text-decoration:none
+    header .cta {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 18px 48px;
+      background: #0097A7;
+      color: #fff;
+      font-weight: 800;
+      border-radius: 50px;
+      text-decoration: none;
     }
-    .cta-block a:hover{background-color:#243bff;color:#fff}
+    header .cta:hover {
+      background-color: #006F74;
+      color: #fff;
+    }
 
-    /* MOBILE */
-    @media(max-width:768px){
-      article{padding:36px}
-      header{padding:86px 16px 110px}
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #003366;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      z-index: 10;
     }
-    @media(max-width:480px){
-      .cta,.cta-block a{width:100%;max-width:320px}
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #00BCD4;
+    }
+
+    /* Main Content */
+    main {
+      max-width: 1250px;
+      margin: auto;
+      padding: 56px 18px;
+    }
+
+    article {
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    }
+
+    h2 {
+      color: #0097A7;
+      font-size: clamp(24px, 4vw, 40px);
+    }
+
+    p {
+      margin: 20px 0;
+      color: #333;
+    }
+
+    ul {
+      margin-left: 22px;
+    }
+
+    li {
+      margin: 14px 0;
+      color: #333;
+    }
+
+    /* Call to Action Block */
+    .cta-block {
+      background: linear-gradient(135deg, #1f2cff, #3f6cff);
+      padding: 54px;
+      border-radius: 40px;
+      margin: 76px 0;
+      text-align: center;
+    }
+    .cta-block a {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 18px 64px;
+      background: #fff;
+      color: #243bff;
+      font-weight: 800;
+      border-radius: 90px;
+      text-decoration: none;
+    }
+    .cta-block a:hover {
+      background-color: #243bff;
+      color: #fff;
+    }
+
+    /* Mobile Responsiveness */
+    @media(max-width: 768px) {
+      article {
+        padding: 36px;
+      }
+      header {
+        padding: 86px 16px 110px;
+      }
+      nav {
+        flex-direction: column;
+        padding: 16px;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .cta, .cta-block a {
+        width: 100%;
+        max-width: 320px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Header Section -->
   <header>
     <h1>Business Finance
       <span>Your Trusted Partner in Financial Growth</span>
     </h1>
-    <a class="cta" href="#services">
-      Explore Our Services
-    </a>
+    <a class="cta" href="#services">Explore Our Services</a>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#home">Home</a>
     <a href="#saving-tips">Saving Tips</a>
@@ -85,6 +168,7 @@
     <a href="#financial-freedom">Financial Freedom</a>
   </nav>
 
+  <!-- Main Content -->
   <main>
     <!-- Home Section -->
     <section id="home">
