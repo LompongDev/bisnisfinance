@@ -67,41 +67,6 @@
       color: white;
     }
 
-    /* Hamburger Menu */
-    #hamburger {
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      z-index: 10000;
-      margin-top: 20px;
-      display: block;
-    }
-
-    #menu {
-      display: none;
-      flex-direction: column;
-      gap: 20px;
-      position: absolute;
-      top: 80px;
-      left: 20px;
-      background-color: #003366;
-      padding: 20px;
-      border-radius: 10px;
-      width: 200px;
-      z-index: 1000;
-    }
-
-    #menu a {
-      color: #fff;
-      font-size: 18px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-    #menu a:hover {
-      color: #00BCD4;
-    }
-
     /* Main Content */
     main {
       max-width: 1250px;
@@ -187,16 +152,6 @@
         padding: 80px 16px 100px;
       }
 
-      nav {
-        flex-direction: column;
-        padding: 16px;
-      }
-
-      nav a {
-        font-size: 14px;
-        margin-bottom: 8px;
-      }
-
       header h1 {
         font-size: 28px;
       }
@@ -228,19 +183,8 @@
     <a class="cta" href="#services">Explore Our Services</a>
   </header>
 
-  <!-- Hamburger Menu Icon -->
-  <div id="hamburger" onclick="toggleMenu()">☰</div>
-
-  <!-- Menu for mobile view -->
-  <nav id="menu">
-    <a href="#home">Home</a>
-    <a href="#saving-tips">Saving Tips</a>
-    <a href="#investment-strategies">Investment Strategies</a>
-    <a href="#financial-freedom">Financial Freedom</a>
-  </nav>
-
   <main>
-    <section id="home" style="display: none;">
+    <section id="home">
       <article>
         <h2>Welcome to Business Finance</h2>
         <p>At Business Finance, we aim to provide you with the best financial strategies, investment tips, and wealth-building methods. Whether you're looking to improve your financial knowledge or take action towards growing your wealth, our insights will guide you to success.</p>
@@ -248,7 +192,7 @@
       </article>
     </section>
 
-    <section id="saving-tips" style="display: none;">
+    <section id="saving-tips">
       <article>
         <h2>5 Simple Tips for Saving Money Effectively</h2>
         <ul>
@@ -261,7 +205,7 @@
       </article>
     </section>
 
-    <section id="investment-strategies" style="display: none;">
+    <section id="investment-strategies">
       <article>
         <h2>Smart Investment Strategies for Long-Term Growth</h2>
         <ul>
@@ -272,7 +216,7 @@
       </article>
     </section>
 
-    <section id="financial-freedom" style="display: none;">
+    <section id="financial-freedom">
       <article>
         <h2>Achieving Financial Freedom: A Guide to Success</h2>
         <ul>
@@ -294,12 +238,5 @@
     <p>© 2026 Business Finance • All Rights Reserved</p>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      var menu = document.getElementById('menu');
-      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-    }
-  </script>
-
 </body>
-      </html>
+</html>
