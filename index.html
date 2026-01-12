@@ -9,25 +9,28 @@
   <meta name="robots" content="index,follow">
   <meta name="referrer" content="no-referrer-when-downgrade">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Google AdSense Verification Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6774463012275083" crossorigin="anonymous"></script>
   
   <style>
     * {margin:0;padding:0;box-sizing:border-box;}
     body {font-family:Poppins, Arial, sans-serif;background-color:#f5f8ff;color:#333;line-height:1.8;}
-    
+
     /* Header */
     header {
       background: url('assets/img/hero-1.png') no-repeat center center/cover;
-      padding: 120px 18px 160px;
+      background-size: cover;
+      padding: 120px 18px;
       text-align: center;
       color: #fff;
+      position: relative;
     }
     header h1 {
       font-size: clamp(32px, 6vw, 66px);
       font-weight: 800;
       letter-spacing: 1.4px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     }
     header h1 span {
       display: block;
@@ -40,14 +43,16 @@
       display: inline-block;
       margin-top: 40px;
       padding: 18px 48px;
-      background: #0097A7;
+      background: #00BCD4;
       color: #fff;
       font-weight: 800;
       border-radius: 50px;
       text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
     header .cta:hover {
-      background-color: #006F74;
+      background-color: #0097A7;
       color: #fff;
     }
 
@@ -66,6 +71,7 @@
       color: #fff;
       font-weight: 600;
       text-decoration: none;
+      text-transform: uppercase;
     }
     nav a:hover {
       color: #00BCD4;
@@ -83,16 +89,21 @@
       padding: 40px;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      margin-bottom: 40px;
     }
 
     h2 {
       color: #0097A7;
       font-size: clamp(24px, 4vw, 40px);
+      font-weight: 600;
+      margin-bottom: 20px;
     }
 
     p {
       margin: 20px 0;
       color: #333;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     ul {
@@ -102,6 +113,16 @@
     li {
       margin: 14px 0;
       color: #333;
+      font-size: 1.1rem;
+    }
+
+    /* Image */
+    .hero-image {
+      width: 100%;
+      height: auto;
+      margin: 30px 0;
+      border-radius: 8px;
+      display: block;
     }
 
     /* Call to Action Block */
@@ -121,6 +142,8 @@
       font-weight: 800;
       border-radius: 90px;
       text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
     .cta-block a:hover {
       background-color: #243bff;
@@ -152,7 +175,6 @@
 
 <body>
 
-  <!-- Header Section -->
   <header>
     <h1>Business Finance
       <span>Your Trusted Partner in Financial Growth</span>
@@ -160,7 +182,6 @@
     <a class="cta" href="#services">Explore Our Services</a>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <a href="#home">Home</a>
     <a href="#saving-tips">Saving Tips</a>
@@ -168,13 +189,13 @@
     <a href="#financial-freedom">Financial Freedom</a>
   </nav>
 
-  <!-- Main Content -->
   <main>
     <!-- Home Section -->
     <section id="home">
       <article>
         <h2>Welcome to Business Finance</h2>
         <p>At Business Finance, we aim to provide you with the best financial strategies, investment tips, and wealth-building methods. Whether you're looking to improve your financial knowledge or take action towards growing your wealth, our insights will guide you to success.</p>
+        <img src="assets/img/hero-1.png" alt="Business Finance - Grow Your Wealth" class="hero-image">
       </article>
     </section>
 
@@ -234,4 +255,4 @@
   </footer>
 
 </body>
-</html>
+  </html>
