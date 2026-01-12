@@ -107,42 +107,6 @@
       color: #00BCD4;
     }
 
-    /* Hamburger Menu */
-    #hamburger {
-      display: block;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 15;
-    }
-
-    #menu {
-      display: none;
-      flex-direction: column;
-      gap: 20px;
-      position: absolute;
-      top: 80px;
-      left: 20px;
-      background-color: #003366;
-      padding: 20px;
-      border-radius: 10px;
-      width: 200px;
-    }
-
-    #menu a {
-      color: #fff;
-      font-size: 18px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-    #menu a:hover {
-      color: #00BCD4;
-    }
-
     /* Main Content */
     main {
       max-width: 1250px;
@@ -259,14 +223,6 @@
       .cta {
         padding: 14px 38px;
       }
-
-      #hamburger {
-        display: block;
-      }
-
-      #menu {
-        display: none;
-      }
     }
 
     @media(max-width: 480px) {
@@ -293,15 +249,6 @@
     <a href="#investment-strategies">Investment Strategies</a>
     <a href="#financial-freedom">Financial Freedom</a>
   </nav>
-
-  <div id="hamburger" onclick="toggleMenu()">☰</div>
-
-  <div id="menu">
-    <a href="#home">Home</a>
-    <a href="#saving-tips">Saving Tips</a>
-    <a href="#investment-strategies">Investment Strategies</a>
-    <a href="#financial-freedom">Financial Freedom</a>
-  </div>
 
   <main>
     <!-- Home Section -->
@@ -362,12 +309,5 @@
     <p>© 2026 Business Finance • All Rights Reserved</p>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      var menu = document.getElementById('menu');
-      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-    }
-  </script>
-
 </body>
-  </html>
+    </html>
