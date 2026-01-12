@@ -14,22 +14,28 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6774463012275083" crossorigin="anonymous"></script>
 
   <style>
-    * {margin:0;padding:0;box-sizing:border-box;}
-    body {font-family:Poppins, Arial, sans-serif;background-color:#f5f8ff;color:#333;line-height:1.8;margin:0;}
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f8ff;
+      color: #333;
+      line-height: 1.8;
+    }
 
     /* Header */
     header {
       background-color: #003366;
-      padding: 60px 18px;
+      color: white;
+      padding: 60px 20px;
       text-align: center;
-      color: #fff;
-      position: relative;
     }
+
     header h1 {
-      font-size: clamp(28px, 6vw, 48px);
+      font-size: clamp(32px, 6vw, 66px);
       font-weight: 800;
       letter-spacing: 1.4px;
     }
+
     header h1 span {
       display: block;
       margin-top: 16px;
@@ -37,43 +43,43 @@
       font-weight: 400;
     }
 
-    /* Centered Button for Explore Services */
     header .cta {
       display: inline-block;
       margin-top: 40px;
       padding: 18px 48px;
       background: #00BCD4;
-      color: #fff;
+      color: white;
       font-weight: 800;
       border-radius: 50px;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 2px;
-      text-align: center;
     }
+
     header .cta:hover {
       background-color: #0097A7;
-      color: #fff;
+      color: white;
     }
 
     /* Navigation */
     nav {
+      position: sticky;
+      top: 0;
       background: #003366;
       padding: 16px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       gap: 24px;
-      position: sticky;
-      top: 0;
       z-index: 10;
-      color: white;
     }
+
     nav a {
-      color: #fff;
+      color: white;
       font-weight: 600;
       text-decoration: none;
       text-transform: uppercase;
     }
+
     nav a:hover {
       color: #00BCD4;
     }
@@ -82,14 +88,14 @@
     main {
       max-width: 1250px;
       margin: auto;
-      padding: 40px 18px;
+      padding: 56px 18px;
     }
 
     article {
       background: #fff;
       padding: 40px;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
       margin-bottom: 40px;
     }
 
@@ -117,14 +123,23 @@
       font-size: 1.1rem;
     }
 
+    .hero-image {
+      width: 100%;
+      height: auto;
+      margin: 30px 0;
+      border-radius: 8px;
+      display: block;
+    }
+
     /* Call to Action Block */
     .cta-block {
       background: linear-gradient(135deg, #1f2cff, #3f6cff);
       padding: 54px;
       border-radius: 40px;
-      margin: 40px 0;
+      margin: 76px 0;
       text-align: center;
     }
+
     .cta-block a {
       display: inline-block;
       margin-top: 24px;
@@ -137,18 +152,18 @@
       text-transform: uppercase;
       letter-spacing: 2px;
     }
+
     .cta-block a:hover {
       background-color: #243bff;
-      color: #fff;
+      color: white;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 40px;
       background-color: #003366;
-      color: #fff;
-      margin-top: 40px;
+      color: white;
     }
 
     footer p {
@@ -160,12 +175,31 @@
       article {
         padding: 36px;
       }
+
       header {
         padding: 80px 16px 100px;
       }
+
       nav {
         flex-direction: column;
         padding: 16px;
+      }
+
+      nav a {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      header h1 {
+        font-size: 28px;
+      }
+
+      header span {
+        font-size: 14px;
+      }
+
+      .cta {
+        padding: 14px 38px;
       }
     }
 
@@ -184,7 +218,6 @@
     <h1>Business Finance
       <span>Your Trusted Partner in Financial Growth</span>
     </h1>
-    <!-- Button Below the Title Centered -->
     <a class="cta" href="#services">Explore Our Services</a>
   </header>
 
@@ -201,6 +234,7 @@
       <article>
         <h2>Welcome to Business Finance</h2>
         <p>At Business Finance, we aim to provide you with the best financial strategies, investment tips, and wealth-building methods. Whether you're looking to improve your financial knowledge or take action towards growing your wealth, our insights will guide you to success.</p>
+        <img src="assets/img/hero-1.png" alt="Business Finance - Grow Your Wealth" class="hero-image">
       </article>
     </section>
 
@@ -254,4 +288,4 @@
   </footer>
 
 </body>
-      </html>
+  </html>
