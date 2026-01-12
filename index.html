@@ -14,12 +14,35 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6774463012275083" crossorigin="anonymous"></script>
 
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f5f8ff;
       color: #333;
       line-height: 1.8;
+    }
+
+    /* Dark Mode */
+    body.darkmode {
+      background-color: #1c1c1c;
+      color: #fff;
+    }
+
+    body.darkmode header {
+      background-color: #003366;
+    }
+
+    body.darkmode nav {
+      background: #003366;
+    }
+
+    body.darkmode .cta {
+      background-color: #0097A7;
+    }
+
+    body.darkmode footer {
+      background-color: #003366;
+      color: #fff;
     }
 
     /* Header */
@@ -86,10 +109,14 @@
 
     /* Hamburger Menu */
     #hamburger {
-      display: none;
+      display: block;
       font-size: 30px;
       color: white;
       cursor: pointer;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 15;
     }
 
     #menu {
@@ -102,6 +129,7 @@
       background-color: #003366;
       padding: 20px;
       border-radius: 10px;
+      width: 200px;
     }
 
     #menu a {
@@ -189,7 +217,6 @@
       color: white;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 40px;
@@ -265,8 +292,9 @@
     <a href="#saving-tips">Saving Tips</a>
     <a href="#investment-strategies">Investment Strategies</a>
     <a href="#financial-freedom">Financial Freedom</a>
-    <div id="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
+
+  <div id="hamburger" onclick="toggleMenu()">☰</div>
 
   <div id="menu">
     <a href="#home">Home</a>
@@ -342,4 +370,4 @@
   </script>
 
 </body>
-      </html>
+  </html>
