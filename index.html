@@ -18,23 +18,33 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
+      line-height: 1.6;
     }
 
+    /* HEADER STYLE */
     header {
-      background-color: #2e3b4e;
+      background: #333;
       color: white;
       padding: 20px 0;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header nav {
+      margin-top: 10px;
     }
 
     header nav ul {
@@ -50,25 +60,30 @@
     header nav ul li a {
       color: white;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
+    header nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* HERO SECTION STYLE */
     section.hero {
-      background: url('https://images.unsplash.com/photo-1573164574395-8e4b625c4b76') no-repeat center center/cover;
+      background: url('https://images.unsplash.com/photo-1573164574395-8e4b625c4b76?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg1MnwxfGFsbHwxfHx8fHx8fHwxNjYxNDE5Mjg5&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+      padding: 120px 20px;
       color: white;
       text-align: center;
-      padding: 80px 20px;
       background-attachment: fixed;
     }
 
     section.hero h2 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       margin-bottom: 20px;
     }
 
     .cta-button {
-      background-color: #fff;
-      color: #28a745;
+      background-color: #ffcc00;
+      color: #333;
       padding: 15px 30px;
       font-size: 1.3rem;
       text-decoration: none;
@@ -77,35 +92,58 @@
     }
 
     .cta-button:hover {
-      background-color: #f1f1f1;
+      background-color: #e6b800;
     }
 
+    /* CONTENT SECTION STYLE */
     .content {
       display: flex;
       justify-content: space-between;
-      margin-top: 40px;
+      margin-top: 80px;
+      padding: 20px;
     }
 
     .content article {
       width: 65%;
     }
 
-    .content aside {
-      width: 30%;
-      background-color: #f1f1f1;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
     .content article h3 a {
-      color: #007BFF;
+      color: #ff6600;
       text-decoration: none;
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
 
     .content article p {
       margin-top: 10px;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .content aside {
+      width: 30%;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .content aside ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .content aside ul li {
+      margin-bottom: 15px;
+    }
+
+    .content aside ul li a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .content aside ul li a:hover {
+      text-decoration: underline;
     }
 
     .adsense-banner {
@@ -113,12 +151,8 @@
       margin: 30px 0;
     }
 
-    .adsense-banner script {
-      display: inline-block;
-    }
-
     footer {
-      background-color: #2e3b4e;
+      background-color: #333;
       color: white;
       padding: 20px 0;
       text-align: center;
@@ -137,6 +171,7 @@
       text-decoration: underline;
     }
 
+    /* FEATURE BOXES STYLE */
     .feature-box {
       display: flex;
       justify-content: space-between;
@@ -175,7 +210,7 @@
 
 <body>
 
-  <!-- Header Section -->
+  <!-- HEADER SECTION -->
   <header>
     <h1>BisnisFinance</h1>
     <nav>
@@ -188,17 +223,17 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <h2>Your Smart Financial Partner</h2>
     <p>Learn how to manage your money, grow wealth, and invest wisely with expert advice and tips.</p>
     <a href="#blog" class="cta-button">Start Learning</a>
   </section>
 
-  <!-- Main Content Section -->
+  <!-- MAIN CONTENT SECTION -->
   <div class="container">
     <div class="content">
-      <!-- Main Articles -->
+      <!-- MAIN ARTICLE -->
       <article>
         <h3><a href="#">5 Smart Investment Strategies for Beginners</a></h3>
         <p>Investing can be tricky, but with the right strategies, you can start building wealth. Learn the basics and more...</p>
@@ -218,7 +253,7 @@
         </div>
       </article>
 
-      <!-- Sidebar Section -->
+      <!-- SIDEBAR -->
       <aside>
         <h3>Quick Tips</h3>
         <ul>
@@ -242,25 +277,26 @@
       </aside>
     </div>
 
-    <!-- Feature Boxes -->
+    <!-- FEATURE BOXES SECTION -->
     <div class="feature-box">
       <div>
-        <img src="https://via.placeholder.com/60" alt="Tips">
-        <h4>Expert Tips</h4>
-        <p>Get practical tips from financial experts to manage your money better.</p>
+        <img src="https://via.placeholder.com/60" alt="Feature 1">
+        <h4>Investment Basics</h4>
+        <p>Learn the fundamentals of investing and how to make your first investment.</p>
       </div>
       <div>
-        <img src="https://via.placeholder.com/60" alt="Invest">
-        <h4>Smart Investment</h4>
-        <p>Discover the best investment strategies for your financial growth.</p>
+        <img src="https://via.placeholder.com/60" alt="Feature 2">
+        <h4>Money Management</h4>
+        <p>Master the art of budgeting, saving, and managing your money effectively.</p>
       </div>
       <div>
-        <img src="https://via.placeholder.com/60" alt="Save">
-        <h4>Smart Saving</h4>
-        <p>Learn how to save effectively and prepare for your future financial goals.</p>
+        <img src="https://via.placeholder.com/60" alt="Feature 3">
+        <h4>Retirement Planning</h4>
+        <p>Discover the best strategies for securing a comfortable retirement.</p>
       </div>
     </div>
 
+    <!-- AdSense Banner -->
     <div class="adsense-banner">
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <ins class="adsbygoogle"
@@ -274,10 +310,10 @@
     </div>
   </div>
 
-  <!-- Footer Section -->
+  <!-- FOOTER SECTION -->
   <footer>
-    <p>&copy; 2026 BisnisFinance. All rights reserved.</p>
-    <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    <p>&copy; 2023 BisnisFinance. All rights reserved.</p>
+    <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
   </footer>
 
 </body>
