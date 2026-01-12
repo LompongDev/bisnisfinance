@@ -1,320 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BisnisFinance - Learn smart finance management, investment strategies, and money tips to achieve financial freedom.">
-  <meta name="keywords" content="finance, investment, wealth, personal finance, smart investing, money management, financial tips, business finance">
-  <meta name="author" content="BisnisFinance">
-  <meta property="og:title" content="BisnisFinance - Your Smart Financial Partner">
-  <meta property="og:description" content="Explore business finance, smart investment strategies, and tips on growing your wealth.">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=BisnisFinance">
-  <meta property="og:url" content="https://bisnisfinance.online">
-  <title>BisnisFinance - Your Smart Financial Partner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business Finance - Expert advice on smart finance management, investment strategies, and financial freedom. Learn how to grow your wealth with actionable insights.">
+    <meta name="keywords" content="finance, investment, business, wealth management, financial tips, business finance, financial freedom, smart investing">
+    <meta name="author" content="Business Finance">
+    <title>Business Finance | Smart Financial Solutions</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
 
-  <!-- Google AdSense Verification Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6774463012275083"
-     crossorigin="anonymous"></script>
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="your-google-verification-code-here">
 
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
+    <style>
+        /* Reset CSS */
+        body, h1, h2, h3, p, a, ul, li, section {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #333;
+            font-size: 16px;
+        }
 
-    /* HEADER STYLE */
-    header {
-      background: #333;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
+        /* Basic Layout */
+        header {
+            background-color: #0273b9;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2rem;
+        }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
+        .navigation {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+        }
 
-    header nav {
-      margin-top: 10px;
-    }
+        .navigation li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-    header nav ul {
-      list-style: none;
-      padding: 0;
-    }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
 
-    header nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
+        .hero {
+            background-color: #0273b9;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
 
-    header nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
+        .cta-button {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
 
-    header nav ul li a:hover {
-      color: #ffcc00;
-    }
+        .cta-button:hover {
+            background-color: #e6b800;
+        }
 
-    /* HERO SECTION STYLE */
-    section.hero {
-      background: url('https://images.unsplash.com/photo-1573164574395-8e4b625c4b76?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg1MnwxfGFsbHwxfHx8fHx8fHwxNjYxNDE5Mjg5&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
-      padding: 120px 20px;
-      color: white;
-      text-align: center;
-      background-attachment: fixed;
-    }
+        .accordion {
+            margin: 20px;
+        }
 
-    section.hero h2 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-    }
+        .accordion button {
+            background-color: #0273b9;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
 
-    .cta-button {
-      background-color: #ffcc00;
-      color: #333;
-      padding: 15px 30px;
-      font-size: 1.3rem;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
+        .accordion button:hover {
+            background-color: #025c8e;
+        }
 
-    .cta-button:hover {
-      background-color: #e6b800;
-    }
+        .panel {
+            display: none;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-left: 3px solid #0273b9;
+            margin: 10px 0;
+            transition: all 0.3s ease-in-out;
+        }
 
-    /* CONTENT SECTION STYLE */
-    .content {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 80px;
-      padding: 20px;
-    }
+        .panel ul {
+            list-style: none;
+            padding-left: 20px;
+        }
 
-    .content article {
-      width: 65%;
-    }
+        .panel ul li {
+            margin: 5px 0;
+        }
 
-    .content article h3 a {
-      color: #ff6600;
-      text-decoration: none;
-      font-size: 2rem;
-    }
+        footer {
+            background-color: #0273b9;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
 
-    .content article p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
+        footer .social-media li {
+            display: inline;
+            margin: 0 10px;
+        }
 
-    .content aside {
-      width: 30%;
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
 
-    .content aside ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .content aside ul li {
-      margin-bottom: 15px;
-    }
-
-    .content aside ul li a {
-      color: #007bff;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-
-    .content aside ul li a:hover {
-      text-decoration: underline;
-    }
-
-    .adsense-banner {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    footer p {
-      font-size: 1rem;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* FEATURE BOXES STYLE */
-    .feature-box {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-    }
-
-    .feature-box div {
-      width: 30%;
-      text-align: center;
-      background-color: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
-
-    .feature-box div:hover {
-      transform: translateY(-10px);
-    }
-
-    .feature-box div img {
-      max-width: 60px;
-      margin-bottom: 15px;
-    }
-
-    .feature-box div h4 {
-      font-size: 1.6rem;
-      margin-top: 15px;
-    }
-
-    .feature-box div p {
-      font-size: 1.1rem;
-    }
-  </style>
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-  <!-- HEADER SECTION -->
-  <header>
-    <h1>BisnisFinance</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h2>Your Smart Financial Partner</h2>
-    <p>Learn how to manage your money, grow wealth, and invest wisely with expert advice and tips.</p>
-    <a href="#blog" class="cta-button">Start Learning</a>
-  </section>
-
-  <!-- MAIN CONTENT SECTION -->
-  <div class="container">
-    <div class="content">
-      <!-- MAIN ARTICLE -->
-      <article>
-        <h3><a href="#">5 Smart Investment Strategies for Beginners</a></h3>
-        <p>Investing can be tricky, but with the right strategies, you can start building wealth. Learn the basics and more...</p>
-        <img src="https://images.unsplash.com/photo-1602920708043-300d01d1b998" alt="Investment Strategies" style="width: 100%; border-radius: 8px;">
-
-        <!-- AdSense Banner -->
-        <div class="adsense-banner">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-6774463012275083"
-               data-ad-slot="YOUR-AD-SLOT"
-               data-ad-format="auto"></ins>
-          <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
-      </article>
-
-      <!-- SIDEBAR -->
-      <aside>
-        <h3>Quick Tips</h3>
-        <ul>
-          <li><a href="#">Best Ways to Grow Your Wealth</a></li>
-          <li><a href="#">Top 5 Investment Apps to Try</a></li>
-          <li><a href="#">How to Start Saving for Retirement</a></li>
+    <!-- Header Section -->
+    <header>
+        <h1>Business Finance</h1>
+        <ul class="navigation">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+    </header>
 
-        <!-- AdSense Banner -->
-        <div class="adsense-banner">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-6774463012275083"
-               data-ad-slot="YOUR-AD-SLOT"
-               data-ad-format="auto"></ins>
-          <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Your Trusted Partner for Financial Growth</h2>
+        <p>We offer expert advice and tailored strategies to help you grow your wealth, plan for the future, and achieve financial freedom. Start building your financial future today with Business Finance!</p>
+        <a href="#services" class="cta-button">Explore Our Services</a>
+    </section>
+
+    <!-- Accordion for Other Sections -->
+    <div class="accordion">
+        <button class="accordion-button">About Us</button>
+        <div class="panel">
+            <h3>About Us</h3>
+            <p>Business Finance is a comprehensive platform offering professional financial advice and solutions for individuals and businesses. Whether you're looking to invest in real estate, plan your finances, or get expert tax consultation, we have the tools and expertise to help you succeed.</p>
+            <p>Our team of experienced financial consultants is dedicated to helping clients achieve financial independence through smart investment strategies and careful financial planning. With over a decade of experience, we aim to provide customized solutions that meet your specific financial goals.</p>
         </div>
-      </aside>
+
+        <button class="accordion-button">Our Services</button>
+        <div class="panel">
+            <h3>Our Services</h3>
+            <ul>
+                <li><strong>Real Estate Investment:</strong> Helping you invest in profitable real estate opportunities.</li>
+                <li><strong>Financial Planning:</strong> Designing personalized financial strategies to meet your life goals.</li>
+                <li><strong>Tax Consultation:</strong> Providing tax solutions for individuals and businesses.</li>
+                <li><strong>Retirement Planning:</strong> Expert strategies to ensure a comfortable future.</li>
+                <li><strong>Debt Management:</strong> Assistance in debt restructuring and repayment.</li>
+            </ul>
+        </div>
+
+        <button class="accordion-button">Blog</button>
+        <div class="panel">
+            <h3>Latest Articles</h3>
+            <p><a href="#">5 Smart Investment Tips for Beginners</a></p>
+            <p><a href="#">How to Create a Sustainable Financial Plan</a></p>
+            <p><a href="#">Tax Planning for Small Businesses</a></p>
+        </div>
+
+        <button class="accordion-button">Contact Us</button>
+        <div class="panel">
+            <h3>Contact Us</h3>
+            <p>Feel free to reach out to us for any inquiries or consultations!</p>
+            <form action="#">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
 
-    <!-- FEATURE BOXES SECTION -->
-    <div class="feature-box">
-      <div>
-        <img src="https://via.placeholder.com/60" alt="Feature 1">
-        <h4>Investment Basics</h4>
-        <p>Learn the fundamentals of investing and how to make your first investment.</p>
-      </div>
-      <div>
-        <img src="https://via.placeholder.com/60" alt="Feature 2">
-        <h4>Money Management</h4>
-        <p>Master the art of budgeting, saving, and managing your money effectively.</p>
-      </div>
-      <div>
-        <img src="https://via.placeholder.com/60" alt="Feature 3">
-        <h4>Retirement Planning</h4>
-        <p>Discover the best strategies for securing a comfortable retirement.</p>
-      </div>
-    </div>
+    <footer>
+        <p>&copy; 2026 Business Finance. All rights reserved.</p>
+        <ul class="social-media">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </footer>
 
-    <!-- AdSense Banner -->
-    <div class="adsense-banner">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-6774463012275083"
-           data-ad-slot="YOUR-AD-SLOT"
-           data-ad-format="auto"></ins>
-      <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
-  </div>
-
-  <!-- FOOTER SECTION -->
-  <footer>
-    <p>&copy; 2023 BisnisFinance. All rights reserved.</p>
-    <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
-  </footer>
-
+    <script>
+        // Accordion functionality
+        var acc = document.getElementsByClassName("accordion-button");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
-</html>
+  </html>
