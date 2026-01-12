@@ -1,304 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Business Finance - Expert advice on smart finance management, investment strategies, and financial freedom. Learn how to grow your wealth with actionable insights.">
-    <meta name="keywords" content="finance, investment, business, wealth management, financial tips, business finance, financial freedom, smart investing">
-    <meta name="author" content="Business Finance">
-    <title>Business Finance | Smart Financial Solutions</title>
-    <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Finance | Your Guide to Financial Success</title>
+  <meta name="description" content="Business Finance - Learn the best tips, strategies, and methods for saving money, investing wisely, and growing your wealth to achieve financial success.">
+  <meta name="keywords" content="business finance, personal finance, investing, wealth management, financial freedom, financial tips, investment strategies, saving money">
+  <meta name="robots" content="index,follow">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Google AdSense Verification Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6774463012275083" crossorigin="anonymous"></script>
+  
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Poppins,Arial;background:#f4f7fb;color:#333;line-height:1.8}
 
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="your-google-verification-code-here">
+    /* HEADER */
+    header{
+      background: url('assets/img/hero-1.jpg') no-repeat center center/cover;
+      padding:100px 18px 120px;text-align:center
+    }
+    header h1{font-size:clamp(32px,6vw,66px);font-weight:800;letter-spacing:1.4px;color:#fff}
+    header h1 span{display:block;margin-top:16px;font-size:clamp(14px,2.5vw,18px);font-weight:400;opacity:.9;color:#fff}
+    header .cta{display:inline-block;margin-top:46px;padding:18px 64px;background:#fff;color:#243bff;font-weight:800;border-radius:90px;text-decoration:none}
+    header .cta:hover{background-color:#243bff;color:#fff}
 
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            font-size: 16px;
-        }
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:3000;background:#243bff;border-bottom:1px solid #1a2255;
+      display:flex;justify-content:center;gap:34px;padding:14px
+    }
+    nav a{color:#fff;text-decoration:none;font-weight:600}
 
-        /* Header Styles */
-        header {
-            background-color: #0273b9;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 2.5rem;
-        }
+    /* MAIN */
+    main{max-width:1250px;margin:auto;padding:56px 18px}
+    article{background:#fff;padding:40px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
 
-        header .navigation {
-            margin-top: 10px;
-            font-size: 1.1rem;
-        }
+    /* TEXT */
+    h2{color:#243bff;font-size:clamp(24px,4vw,40px)}
+    h3{margin-top:30px;color:#243bff;font-size:1.5rem}
+    p{margin:20px 0;color:#333}
+    ul{margin-left:22px}
+    li{margin:14px 0;color:#333;}
 
-        header .navigation li {
-            display: inline;
-            margin: 0 20px;
-        }
+    /* CTA BLOCK */
+    .cta-block{
+      background:linear-gradient(135deg,#1f2cff,#3f6cff);
+      padding:54px;border-radius:40px;margin:76px 0;text-align:center
+    }
+    .cta-block a{
+      display:inline-block;margin-top:24px;padding:18px 64px;background:#fff;color:#243bff;
+      font-weight:800;border-radius:90px;text-decoration:none
+    }
+    .cta-block a:hover{background-color:#243bff;color:#fff}
 
-        header .navigation a {
-            color: white;
-            text-decoration: none;
-        }
-
-        header .navigation a:hover {
-            text-decoration: underline;
-        }
-
-        /* Hero Section Styles */
-        .hero {
-            background-image: url('https://via.placeholder.com/1200x630?text=Smart+Financial+Solutions'); 
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-            border-bottom: 4px solid #ffcc00;
-        }
-
-        .cta-button {
-            background-color: #ffcc00;
-            color: #333;
-            padding: 15px 40px;
-            border-radius: 5px;
-            font-size: 1.3rem;
-            transition: background-color 0.3s ease-in-out;
-            text-decoration: none;
-        }
-
-        .cta-button:hover {
-            background-color: #e6b800;
-        }
-
-        /* Content Section */
-        section {
-            padding: 60px 20px;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        section p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .service-box {
-            display: flex;
-            gap: 30px;
-            justify-content: space-between;
-            margin-top: 50px;
-            flex-wrap: wrap;
-        }
-
-        .service-box div {
-            background-color: #fff;
-            padding: 30px;
-            flex: 1 1 calc(33% - 20px);
-            border-radius: 8px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .service-box div h4 {
-            margin-bottom: 10px;
-            font-size: 1.8rem;
-        }
-
-        .service-box div p {
-            color: #777;
-        }
-
-        .service-box div img {
-            max-width: 80px;
-            margin-bottom: 20px;
-        }
-
-        .accordion {
-            margin-top: 40px;
-        }
-
-        .accordion button {
-            background-color: #0273b9;
-            color: white;
-            padding: 15px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            font-size: 1.3rem;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            transition: background-color 0.3s;
-        }
-
-        .accordion button:hover {
-            background-color: #025c8e;
-        }
-
-        .panel {
-            display: none;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-left: 3px solid #0273b9;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            background-color: #0273b9;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        footer .social-media li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        footer .social-media a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        footer .social-media a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .service-box div {
-                flex: 1 1 100%;
-                margin-bottom: 30px;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .cta-button {
-                padding: 12px 25px;
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    /* MOBILE */
+    @media(max-width:768px){
+      article{padding:36px}
+      header{padding:86px 16px 110px}
+    }
+    @media(max-width:480px){
+      .cta,.cta-block a{width:100%;max-width:320px}
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Business Finance</h1>
-        <ul class="navigation">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+  <header>
+    <h1>Business Finance
+      <span>Your Trusted Partner in Financial Growth</span>
+    </h1>
+    <a class="cta" href="#services">
+      Explore Our Services
+    </a>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#saving-tips">Saving Tips</a>
+    <a href="#investment-strategies">Investment Strategies</a>
+    <a href="#financial-freedom">Financial Freedom</a>
+  </nav>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <article>
+        <h2>Welcome to Business Finance</h2>
+        <p>At Business Finance, we aim to provide you with the best financial strategies, investment tips, and wealth-building methods. Whether you're looking to improve your financial knowledge or take action towards growing your wealth, our insights will guide you to success.</p>
+      </article>
+    </section>
+
+    <!-- Saving Tips Section -->
+    <section id="saving-tips">
+      <article>
+        <h2>5 Simple Tips for Saving Money Effectively</h2>
+        <p>Saving money doesn’t have to be difficult. Here are some tips to get you started:</p>
+        <ul>
+          <li><strong>Create a Budget</strong> – Track your income and expenses, and plan your savings goals.</li>
+          <li><strong>Pay Yourself First</strong> – Set aside a portion of your income for savings before anything else.</li>
+          <li><strong>Automate Your Savings</strong> – Set up automatic transfers to savings accounts every month.</li>
+          <li><strong>Reduce Impulse Spending</strong> – Avoid unplanned purchases and focus on your priorities.</li>
+          <li><strong>Build an Emergency Fund</strong> – Set aside 3-6 months of expenses to cover unexpected costs.</li>
         </ul>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h2>Your Trusted Partner for Financial Growth</h2>
-        <p>Get expert advice, smart investment strategies, and tailored financial solutions that can help you build wealth and achieve financial freedom.</p>
-        <a href="#services" class="cta-button">Explore Our Services</a>
+      </article>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>We offer a range of tailored financial services to help you succeed. Whether you're looking to invest, manage your wealth, or plan for the future, we’ve got you covered.</p>
-        <div class="service-box">
-            <div>
-                <img src="https://via.placeholder.com/80" alt="Investment Basics">
-                <h4>Investment Strategies</h4>
-                <p>Master the best investment strategies to grow your wealth over time. We cover stocks, bonds, and more.</p>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/80" alt="Financial Planning">
-                <h4>Financial Planning</h4>
-                <p>Get personalized financial plans to help you meet your goals, from saving for retirement to managing taxes.</p>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/80" alt="Debt Management">
-                <h4>Debt Management</h4>
-                <p>Learn how to manage and reduce your debt effectively with proven strategies and expert advice.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog">
-        <h2>Latest Articles</h2>
-        <div class="accordion">
-            <button class="accordion-button">5 Investment Tips for Beginners</button>
-            <div class="panel">
-                <p>Starting with investments can be overwhelming. These tips will guide you through the basics and help you make informed choices.</p>
-                <a href="#">Read More</a>
-            </div>
-
-            <button class="accordion-button">How to Build Wealth Over Time</button>
-            <div class="panel">
-                <p>Building wealth takes time and discipline. In this article, we share strategies to help you grow your wealth steadily over the years.</p>
-                <a href="#">Read More</a>
-            </div>
-
-            <button class="accordion-button">Top Strategies for Tax Optimization</button>
-            <div class="panel">
-                <p>Optimize your tax situation by understanding key tax-saving strategies that can help you keep more of your money.</p>
-                <a href="#">Read More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions? Feel free to reach out to us for any financial consultation or inquiries.</p>
-        <form action="#">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Your Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br><br>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2026 Business Finance. All rights reserved.</p>
-        <ul class="social-media">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
+    <!-- Investment Strategies Section -->
+    <section id="investment-strategies">
+      <article>
+        <h2>Smart Investment Strategies for Long-Term Growth</h2>
+        <p>Investing is one of the best ways to build wealth. Here are a few strategies to consider:</p>
+        <ul>
+          <li><strong>Diversify Your Portfolio</strong> – Spread your investments across different asset classes to reduce risk.</li>
+          <li><strong>Focus on Long-Term Investments</strong> – Invest in assets that will grow over time, rather than seeking short-term gains.</li>
+          <li><strong>Reinvest Your Earnings</strong> – Use the returns from your investments to buy more assets and grow your wealth faster.</li>
+          <li><strong>Do Your Research</strong> – Understand the investments you’re making and align them with your goals.</li>
         </ul>
-    </footer>
+      </article>
+    </section>
 
-    <script>
-        // Accordion functionality
-        var acc = document.getElementsByClassName("accordion-button");
-        for (var i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <!-- Financial Freedom Section -->
+    <section id="financial-freedom">
+      <article>
+        <h2>Achieving Financial Freedom: A Guide to Success</h2>
+        <p>Financial freedom is the ability to live life on your terms, without worrying about money. Here’s how to achieve it:</p>
+        <ul>
+          <li><strong>Live Below Your Means</strong> – Spend less than you earn and save the difference.</li>
+          <li><strong>Invest in Passive Income Streams</strong> – Build wealth through stocks, bonds, real estate, or businesses that generate income.</li>
+          <li><strong>Eliminate Debt</strong> – Pay off high-interest debt quickly to increase your wealth.</li>
+          <li><strong>Plan for the Future</strong> – Set long-term goals and work towards them consistently.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Call to Action Section -->
+    <div class="cta-block">
+      <h3>Start Your Financial Journey Today</h3>
+      <p>Get started on the path to financial freedom by implementing these tips and strategies today!</p>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </main>
+
+  <footer style="text-align:center;padding:40px;color:#9aa3d6">
+    © 2025 Business Finance • All Rights Reserved
+  </footer>
+
 </body>
-                    </html>
+      </html>
