@@ -15,18 +15,18 @@
 
   <style>
     * {margin:0;padding:0;box-sizing:border-box;}
-    body {font-family:Poppins, Arial, sans-serif;background-color:#f5f8ff;color:#333;line-height:1.8;}
+    body {font-family:Poppins, Arial, sans-serif;background-color:#f5f8ff;color:#333;line-height:1.8;margin:0;}
 
     /* Header */
     header {
       background-color: #003366;
-      padding: 120px 18px;
+      padding: 60px 18px;
       text-align: center;
       color: #fff;
       position: relative;
     }
     header h1 {
-      font-size: clamp(32px, 6vw, 66px);
+      font-size: clamp(28px, 6vw, 48px);
       font-weight: 800;
       letter-spacing: 1.4px;
     }
@@ -36,6 +36,8 @@
       font-size: clamp(14px, 2.5vw, 18px);
       font-weight: 400;
     }
+
+    /* Centered Button for Explore Services */
     header .cta {
       display: inline-block;
       margin-top: 40px;
@@ -47,6 +49,7 @@
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 2px;
+      text-align: center;
     }
     header .cta:hover {
       background-color: #0097A7;
@@ -55,14 +58,15 @@
 
     /* Navigation */
     nav {
-      position: sticky;
-      top: 0;
       background: #003366;
       padding: 16px;
       display: flex;
       justify-content: space-between;
       gap: 24px;
+      position: sticky;
+      top: 0;
       z-index: 10;
+      color: white;
     }
     nav a {
       color: #fff;
@@ -74,42 +78,11 @@
       color: #00BCD4;
     }
 
-    /* Hamburger Menu */
-    #hamburger {
-      display: none;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-    }
-
-    #menu {
-      display: none;
-      flex-direction: column;
-      gap: 20px;
-      position: absolute;
-      top: 80px;
-      left: 20px;
-      background-color: #003366;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    #menu a {
-      color: #fff;
-      font-size: 18px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
-    #menu a:hover {
-      color: #00BCD4;
-    }
-
     /* Main Content */
     main {
       max-width: 1250px;
       margin: auto;
-      padding: 56px 18px;
+      padding: 40px 18px;
     }
 
     article {
@@ -144,21 +117,12 @@
       font-size: 1.1rem;
     }
 
-    /* Image */
-    .hero-image {
-      width: 100%;
-      height: auto;
-      margin: 30px 0;
-      border-radius: 8px;
-      display: block;
-    }
-
     /* Call to Action Block */
     .cta-block {
       background: linear-gradient(135deg, #1f2cff, #3f6cff);
       padding: 54px;
       border-radius: 40px;
-      margin: 76px 0;
+      margin: 40px 0;
       text-align: center;
     }
     .cta-block a {
@@ -178,22 +142,17 @@
       color: #fff;
     }
 
-    /* Floating Buttons */
-    .floating-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0097A7;
-      color: white;
-      padding: 15px 40px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 16px;
-      z-index: 1000;
-      text-decoration: none;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #003366;
+      color: #fff;
+      margin-top: 40px;
     }
-    .floating-btn:hover {
-      background-color: #00BCD4;
+
+    footer p {
+      font-size: 14px;
     }
 
     /* Mobile Responsiveness */
@@ -202,17 +161,11 @@
         padding: 36px;
       }
       header {
-        padding: 86px 16px 110px;
+        padding: 80px 16px 100px;
       }
       nav {
         flex-direction: column;
         padding: 16px;
-      }
-      #hamburger {
-        display: block;
-      }
-      #menu {
-        display: none;
       }
     }
 
@@ -231,6 +184,7 @@
     <h1>Business Finance
       <span>Your Trusted Partner in Financial Growth</span>
     </h1>
+    <!-- Button Below the Title Centered -->
     <a class="cta" href="#services">Explore Our Services</a>
   </header>
 
@@ -239,15 +193,7 @@
     <a href="#saving-tips">Saving Tips</a>
     <a href="#investment-strategies">Investment Strategies</a>
     <a href="#financial-freedom">Financial Freedom</a>
-    <div id="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
-
-  <div id="menu">
-    <a href="#home">Home</a>
-    <a href="#saving-tips">Saving Tips</a>
-    <a href="#investment-strategies">Investment Strategies</a>
-    <a href="#financial-freedom">Financial Freedom</a>
-  </div>
 
   <main>
     <!-- Home Section -->
@@ -255,7 +201,6 @@
       <article>
         <h2>Welcome to Business Finance</h2>
         <p>At Business Finance, we aim to provide you with the best financial strategies, investment tips, and wealth-building methods. Whether you're looking to improve your financial knowledge or take action towards growing your wealth, our insights will guide you to success.</p>
-        <img src="assets/img/hero-1.png" alt="Business Finance - Grow Your Wealth" class="hero-image">
       </article>
     </section>
 
@@ -304,19 +249,9 @@
     </div>
   </main>
 
-  <footer style="text-align:center;padding:40px;color:#9aa3d6">
-    © 2025 Business Finance • All Rights Reserved
+  <footer>
+    <p>© 2026 Business Finance • All Rights Reserved</p>
   </footer>
 
-  <!-- Floating Button -->
-  <a href="#contact" class="floating-btn">Contact Us</a>
-
-  <script>
-    function toggleMenu() {
-      var menu = document.getElementById('menu');
-      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-    }
-  </script>
-
 </body>
-  </html>
+      </html>
