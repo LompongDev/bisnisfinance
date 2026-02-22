@@ -48,16 +48,25 @@ header p{
   max-width:1100px;
   margin:auto;
 }
+.center{text-align:center}
+
 .stats{
   display:flex;
   justify-content:space-between;
   text-align:center;
   margin-top:25px;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.stat{
+  flex:1;
+  min-width:120px;
 }
 .stat h3{
   font-size:22px;
   color:#ff4da6;
 }
+
 .profiles{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -73,6 +82,7 @@ header p{
   width:100%;
   border-radius:10px;
 }
+
 .features{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -84,20 +94,30 @@ header p{
   padding:20px;
   border-radius:15px;
 }
+
 .testimonial{
   background:#141a33;
   padding:20px;
   border-radius:15px;
   margin-top:15px;
 }
+
+.ad-banner{
+  margin:30px auto;
+  text-align:center;
+}
+
 footer{
   text-align:center;
   padding:30px;
   font-size:12px;
   color:#aaa;
 }
-.center{
-  text-align:center;
+
+/* Responsive */
+@media(max-width:768px){
+  header h1{font-size:24px}
+  .btn{padding:12px 25px}
 }
 </style>
 </head>
@@ -110,7 +130,21 @@ footer{
   <a href="#" class="btn">Continue to Platform</a>
 </header>
 
-<!-- SECTION 1 STATS -->
+<!-- ADBANNER TOP 728x90 -->
+<div class="ad-banner">
+<script>
+  atOptions = {
+    'key' : 'a41db9639cb98041dec69363b64f85bc',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://ceaslessivorygoats.com/a41db9639cb98041dec69363b64f85bc/invoke.js"></script>
+</div>
+
+<!-- STATS -->
 <section class="section center">
   <div class="stats">
     <div class="stat">
@@ -128,7 +162,7 @@ footer{
   </div>
 </section>
 
-<!-- MONETAG BODY 1 -->
+<!-- MONETAG BODY -->
 <section class="section center">
 <script>
 (function(s){
@@ -142,7 +176,7 @@ s.src='https://al5sm.com/tag.min.js'
 </script>
 </section>
 
-<!-- PROFILE PREVIEW -->
+<!-- PROFILES -->
 <section class="section">
   <h2>Featured Profiles</h2>
   <div class="profiles">
@@ -161,6 +195,20 @@ s.src='https://al5sm.com/tag.min.js'
   </div>
 </section>
 
+<!-- ADBANNER 300x250 -->
+<div class="ad-banner">
+<script>
+  atOptions = {
+    'key' : 'a10490cfd35061b898517079f7170fc8',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://ceaslessivorygoats.com/a10490cfd35061b898517079f7170fc8/invoke.js"></script>
+</div>
+
 <!-- FEATURES -->
 <section class="section">
   <h2>Why Join?</h2>
@@ -177,31 +225,6 @@ s.src='https://al5sm.com/tag.min.js'
       <h3>Instant Matching</h3>
       <p>Connect with active members near you instantly.</p>
     </div>
-  </div>
-</section>
-
-<!-- MONETAG BODY 2 -->
-<section class="section center">
-<script>
-(function(s){
-s.dataset.zone='10640112',
-s.src='https://nap5k.com/tag.min.js'
-})
-([document.documentElement, document.body]
-.filter(Boolean)
-.pop()
-.appendChild(document.createElement('script')));
-</script>
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="section">
-  <h2>Member Feedback</h2>
-  <div class="testimonial">
-    “I was surprised by how real the conversations were. It feels exclusive and safe.” – Daniel, 32
-  </div>
-  <div class="testimonial">
-    “Much better than public apps. More serious members here.” – Alex, 29
   </div>
 </section>
 
