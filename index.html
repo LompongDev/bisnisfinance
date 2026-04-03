@@ -1,200 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Private Members Lounge | bisnisfinance.online</title>
+<title>Klaim Dana Kaget Hari Ini</title>
 <meta name="robots" content="noindex,nofollow">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
-<!-- MONETAG POPUNDER -->
-<script src="https://quge5.com/88/tag.min.js" data-zone="213375" async data-cfasync="false"></script>
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Poppins,Arial;background:#0b0f1c;color:#fff;line-height:1.6}
+body{
+font-family:Poppins,Arial;
+background:#0b0f1c;
+color:#fff;
+text-align:center;
+}
+
+/* HEADER */
 header{
 background:linear-gradient(135deg,#1e1b4b,#5b21b6);
-padding:70px 20px;
-text-align:center
+padding:60px 20px;
 }
-header h1{font-size:34px;font-weight:800}
-header p{margin-top:15px;font-size:16px;color:#e9d5ff;max-width:750px;margin:auto}
+
+header h1{
+font-size:28px;
+font-weight:800;
+}
+
+header p{
+margin-top:12px;
+font-size:14px;
+color:#e9d5ff;
+max-width:600px;
+margin:auto;
+}
+
+/* TIMER */
+.timer{
+margin-top:15px;
+font-size:18px;
+color:#ffeb3b;
+font-weight:600;
+}
+
+/* BUTTON */
 .btn{
 display:inline-block;
-margin-top:30px;
+margin-top:25px;
 padding:15px 40px;
-background:#ff2e8a;
+background:#00c853;
 border-radius:50px;
 color:#fff;
 text-decoration:none;
 font-weight:700;
-box-shadow:0 0 20px rgba(255,46,138,.6)
+font-size:15px;
+box-shadow:0 0 15px rgba(0,200,83,.6);
+transition:.3s;
 }
-.section{padding:50px 20px;max-width:1100px;margin:auto}
-.center{text-align:center}
-.text-block{max-width:850px;margin:auto;margin-top:20px;color:#ddd}
+.btn:hover{transform:scale(1.05)}
 
-.stats{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;text-align:center;margin-top:40px}
-.stat{flex:1;min-width:120px}
-.stat h3{color:#ff4da6;font-size:22px}
-
-.profiles{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;margin-top:25px
-}
-.card{background:#141a33;padding:12px;border-radius:15px;text-align:center}
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:10px
+/* SECTION */
+.section{
+padding:35px 20px;
+max-width:900px;
+margin:auto;
 }
 
+.box{
+background:#141a33;
+padding:18px;
+border-radius:12px;
+}
+
+/* STATS */
+.stats{
+display:flex;
+justify-content:space-around;
+margin-top:20px;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.stat h3{
+color:#00e676;
+}
+
+/* ADS */
 .desktop-ad,
-.mobile-ad{ text-align:center; margin:30px 0 }
+.mobile-ad{ text-align:center; margin:25px 0 }
 
 .desktop-ad{ display:block }
 .mobile-ad{ display:none }
 
-footer{text-align:center;padding:40px 20px;font-size:13px;color:#aaa;line-height:1.6}
+/* NOTIF */
+.notif{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#141a33;
+padding:10px 14px;
+border-radius:10px;
+font-size:13px;
+opacity:0;
+transform:translateY(10px);
+transition:.4s;
+}
+
+/* LOADING */
+.loading{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.7);
+align-items:center;
+justify-content:center;
+font-size:18px;
+}
+
+/* FOOTER */
+footer{
+margin-top:40px;
+padding:25px;
+font-size:12px;
+color:#aaa;
+}
 
 @media(max-width:768px){
 .desktop-ad{ display:none }
 .mobile-ad{ display:block }
-header h1{ font-size:26px }
+header h1{ font-size:22px }
 }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
-<h1>🔥 Free Private Access – Meet Real Members Instantly!</h1>
-<p>
-Join thousands of adults on our private network today.  
-No signup fee, 100% verified profiles, fully private & secure.  
-Your next connection is just one click away!
-</p>
-<a href="#" class="btn">Get Free Access Now</a>
+<h1>💸 Klaim Dana Kaget Sekarang</h1>
+<p>Program saldo gratis terbatas. Klik untuk cek apakah kamu beruntung hari ini.</p>
+
+<div class="timer">Sisa waktu: <span id="time">02:00</span></div>
+
+<a href="#" class="btn" onclick="claim()">CLAIM DANA KAGET</a>
 </header>
 
-<!-- ================= IKLAN ATAS (SEBELUM GAMBAR) ================= -->
-
-<!-- DESKTOP 728x90 -->
+<!-- IKLAN ATAS -->
 <div class="desktop-ad">
 <script>
 var atOptions = {
   key : 'a41db9639cb98041dec69363b64f85bc',
   format : 'iframe',
   height : 90,
-  width : 728,
-  params : {}
+  width : 728
 };
 </script>
 <script src="https://ceaslessivorygoats.com/a41db9639cb98041dec69363b64f85bc/invoke.js"></script>
 </div>
 
-<!-- MOBILE 300x250 -->
 <div class="mobile-ad">
 <script>
 var atOptions = {
   key : 'a10490cfd35061b898517079f7170fc8',
   format : 'iframe',
   height : 250,
-  width : 300,
-  params : {}
+  width : 300
 };
 </script>
 <script src="https://ceaslessivorygoats.com/a10490cfd35061b898517079f7170fc8/invoke.js"></script>
 </div>
 
-<!-- ================================================================ -->
-
-<!-- PROFILES -->
 <section class="section">
-<h2 class="center">🔥 Featured Active Profiles</h2>
-<div class="profiles">
-<div class="card">
-<img src="assets/img/girl1.jpg" loading="lazy">
-<p>Emma, 24</p>
-</div>
-<div class="card">
-<img src="assets/img/girl2.jpg" loading="lazy">
-<p>Sophia, 27</p>
-</div>
-<div class="card">
-<img src="assets/img/girl3.jpg" loading="lazy">
-<p>Olivia, 22</p>
-</div>
-</div>
-</section>
-
-<!-- STORY -->
-<section class="section center">
-<div class="text-block">
-<p>
-Thousands of adults join our private network daily seeking genuine interaction.  
-Unlike mainstream platforms, we prioritize <strong>discretion, security, and verified members</strong>.  
-Start <strong>for FREE today!</strong> No credit card required, fully private, and instant access.
-</p>
-
-<p>
-Whether you're looking for meaningful conversations, private chats, or something more exciting, <strong>unlock full access in just one click!</strong>
+<div class="box">
+<h2>🎁 Program Hari Ini</h2>
+<p style="color:#ccc;margin-top:8px">
+Saldo dibagikan secara acak kepada pengguna aktif. Tanpa biaya & tanpa deposit.
 </p>
 </div>
 
 <div class="stats">
 <div class="stat">
-<h3>12,842+</h3>
-<p>Active Members</p>
+<h3>12.000+</h3>
+<p>Klaim Berhasil</p>
 </div>
 <div class="stat">
-<h3>2,431</h3>
-<p>Online Now</p>
+<h3>Rp 60JT+</h3>
+<p>Total Dibagikan</p>
 </div>
 <div class="stat">
-<h3>98%</h3>
-<p>Verified Profiles</p>
+<h3>Live</h3>
+<p>Sedang Berlangsung</p>
 </div>
 </div>
 </section>
 
-<!-- NATIVE AD -->
-<div class="section center">
+<!-- NATIVE ADS -->
+<div class="section">
 <script async data-cfasync="false"
 src="https://ceaslessivorygoats.com/08d031b63c13da1311d00d28eaaf880c/invoke.js"></script>
 <div id="container-08d031b63c13da1311d00d28eaaf880c"></div>
 </div>
 
-<!-- MOBILE BOTTOM 300x250 -->
-<div class="mobile-ad">
-<script>
-var atOptions = {
-  key : 'a10490cfd35061b898517079f7170fc8',
-  format : 'iframe',
-  height : 250,
-  width : 300,
-  params : {}
-};
-</script>
-<script src="https://ceaslessivorygoats.com/a10490cfd35061b898517079f7170fc8/invoke.js"></script>
-</div>
+<!-- NOTIF -->
+<div class="notif" id="notif"></div>
 
-<!-- CTA BAWAH -->
-<div class="section center" style="margin-top:30px;">
-<a href="#" class="btn">Start Free Access Now</a>
-</div>
+<!-- LOADING -->
+<div class="loading" id="loading">Memproses klaim...</div>
 
 <footer>
-This platform is intended for adults 18+ only.  
-All profiles are for promotional and entertainment purposes.  
-By continuing, you confirm you are over 18 years of age.  
-
-© 2026 bisnisfinance.online · Private Members Platform
+Program promosi terbatas & acak.  
+© 2026 bisnisfinance.online
 </footer>
+
+<script>
+/* TIMER */
+let duration = 120;
+const display = document.getElementById("time");
+
+setInterval(()=>{
+let m = Math.floor(duration/60);
+let s = duration%60;
+display.textContent =
+(m<10?"0":"")+m+":"+(s<10?"0":"")+s;
+
+if(duration > 0){
+duration--;
+}
+},1000);
+
+/* NOTIF */
+const names = ["Andi","Budi","Rina","Sari","Dewi","Rizky","Agus"];
+function showNotif(){
+let n = names[Math.floor(Math.random()*names.length)];
+let amt = (Math.floor(Math.random()*150)+50) * 1000;
+
+let notif = document.getElementById("notif");
+notif.textContent = n+" berhasil klaim Rp "+amt.toLocaleString();
+notif.style.opacity = 1;
+notif.style.transform = "translateY(0)";
+
+setTimeout(()=>{
+notif.style.opacity = 0;
+notif.style.transform = "translateY(10px)";
+},3000);
+}
+setInterval(showNotif,6000);
+
+/* CLAIM REDIRECT */
+function claim(){
+document.getElementById("loading").style.display="flex";
+
+setTimeout(()=>{
+window.location.href="https://link.dana.id/danakaget?c=sa565qb9m&r=kSZmud&orderId=20260403101214792315010300166031772364591";
+},2000);
+}
+</script>
 
 </body>
 </html>
